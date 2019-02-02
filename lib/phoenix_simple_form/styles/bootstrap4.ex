@@ -68,8 +68,7 @@ defmodule PhoenixSimpleForm.Styles.Bootstrap4 do
     content_tag :div, wrapper_html(opts, %{class: "checkbox"}) do
       [
         label(f, name, class: "checkbox") do
-          [
-          checkbox(f, name, input_html(opts, %{})), label_translation(f, name)]
+          [checkbox(f, name, input_html(opts, %{})), label_translation(f, name)]
         end,
         error_tag(f, name)
       ]
@@ -82,7 +81,7 @@ defmodule PhoenixSimpleForm.Styles.Bootstrap4 do
 
   def error_tag(form, field) do
     if error = form.errors[field] do
-      content_tag :span, translate_error(error), class: "help-block text-danger"
+      content_tag(:span, translate_error(error), class: "help-block text-danger")
     else
       {:safe, ""}
     end
@@ -90,7 +89,7 @@ defmodule PhoenixSimpleForm.Styles.Bootstrap4 do
 
   def error_notification(_changeset) do
     content_tag :div, class: "alert alert-danger" do
-      content_tag :p, Gettext.dgettext(WorkshopsDe.Gettext, "forms", "error_notification")
+      content_tag(:p, Gettext.dgettext(WorkshopsDe.Gettext, "forms", "error_notification"))
     end
   end
 end
