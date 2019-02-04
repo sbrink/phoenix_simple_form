@@ -2,7 +2,7 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-#     config :simple_form,   style: Phoenix.SimpleForm.Styles.Bootstrap4,
+#     config :phoenix_simple_form,   style: Phoenix.SimpleForm.Styles.Bootstrap4,
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
@@ -12,11 +12,11 @@ use Mix.Config
 
 # You can configure your application as:
 #
-#     config :simple_form, key: :value
+#     config :phoenix_simple_form, key: :value
 #
 # and access this configuration in your application as:
 #
-#     Application.get_env(:simple_form, :key)
+#     Application.get_env(:phoenix_simple_form, :key)
 #
 # You can also configure a 3rd-party app:
 #

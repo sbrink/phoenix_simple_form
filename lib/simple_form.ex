@@ -23,13 +23,13 @@ defmodule Phoenix.SimpleForm do
 
   defp get_style_module(opts) do
     {opts_style, opts} = Keyword.pop(opts, :_style)
-    app_style = Application.get_env(:simple_form, :style)
-    {opts_style || app_style || raise("Please set a style for simple_form"), opts}
+    app_style = Application.get_env(:phoenix_simple_form, :style)
+    {opts_style || app_style || raise("Please set a style for phoenix_simple_form"), opts}
   end
 
   defp get_translate_fn(opts) do
     {opts_translate_fn, opts} = Keyword.pop(opts, :_translate_error_fn)
-    app_translate = Application.get_env(:simple_form, :translate_error_fn)
+    app_translate = Application.get_env(:phoenix_simple_form, :translate_error_fn)
     {opts_translate_fn || app_translate || raise("Please set a translate function for simple_form"), opts}
   end
 end
